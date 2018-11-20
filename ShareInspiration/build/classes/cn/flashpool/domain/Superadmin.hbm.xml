@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-17 14:12:14 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="shareinspiration" dynamic-insert="false" dynamic-update="false" mutable="true" name="cn.flashpool.domain.Superadmin" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="superadmin">
+        <id name="saId" type="java.lang.Integer">
+            <column name="SA_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="saName" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="SA_name"/>
+        </property>
+        <property generated="never" lazy="false" name="saPw" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="SA_pw"/>
+        </property>
+        <property generated="never" lazy="false" name="saNickname" optimistic-lock="true" type="string" unique="false">
+            <column length="24" name="SA_nickname"/>
+        </property>
+    </class>
+</hibernate-mapping>

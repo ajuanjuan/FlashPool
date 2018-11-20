@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-17 14:12:14 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="shareinspiration" dynamic-insert="false" dynamic-update="false" mutable="true" name="cn.flashpool.domain.Topic" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="topic">
+        <id name="TId" type="java.lang.Integer">
+            <column name="T_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="TName" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="T_name"/>
+        </property>
+        <property generated="never" lazy="false" name="TIntroLoc" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="T_intro_loc"/>
+        </property>
+        <property generated="never" lazy="false" name="TIntroImg" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="T_intro_img"/>
+        </property>
+        <property generated="never" lazy="false" name="TFollowNum" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="T_follow_num"/>
+        </property>
+        <property generated="never" lazy="false" name="TNoteNum" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="T_note_num"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="notes" optimistic-lock="true" sort="unsorted" table="note">
+            <key on-delete="noaction">
+                <column name="T_id" not-null="true"/>
+            </key>
+            <one-to-many class="cn.flashpool.domain.Note" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

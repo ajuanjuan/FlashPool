@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-17 14:12:14 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="shareinspiration" dynamic-insert="false" dynamic-update="false" mutable="true" name="cn.flashpool.domain.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
+        <id name="userId" type="int">
+            <column name="user_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column name="user_name"/>
+        </property>
+        <property generated="never" lazy="false" name="userPassword" optimistic-lock="true" type="string" unique="false">
+            <column name="user_password"/>
+        </property>
+        <property generated="never" lazy="false" name="userPhone" optimistic-lock="true" type="string" unique="false">
+            <column name="user_phone"/>
+        </property>
+        <property generated="never" lazy="false" name="userState" optimistic-lock="true" type="int" unique="false">
+            <column name="user_state" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-17 14:12:14 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="shareinspiration" dynamic-insert="false" dynamic-update="false" mutable="true" name="cn.flashpool.domain.Poolfriend" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="poolfriend">
+        <id name="pyId" type="int">
+            <column name="PY_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="pyName" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="PY_name"/>
+        </property>
+        <property generated="never" lazy="false" name="pyMobile" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="PY_mobile"/>
+        </property>
+        <property generated="never" lazy="false" name="pyCountryCode" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="PY_country_code"/>
+        </property>
+        <property generated="never" lazy="false" name="pyStatus" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="PY_status"/>
+        </property>
+        <property generated="never" lazy="false" name="pySex" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="PY_sex"/>
+        </property>
+        <property generated="never" lazy="false" name="pyRealName" optimistic-lock="true" type="string" unique="false">
+            <column length="39" name="PY_real_name"/>
+        </property>
+        <property generated="never" lazy="false" name="pyEmail" optimistic-lock="true" type="string" unique="false">
+            <column length="320" name="PY_email"/>
+        </property>
+        <property generated="never" lazy="false" name="pyNickname" optimistic-lock="true" type="string" unique="false">
+            <column length="24" name="PY_nickname"/>
+        </property>
+        <property generated="never" lazy="false" name="pyAvatar" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="PY_avatar"/>
+        </property>
+        <property generated="never" lazy="false" name="pyIntro" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="PY_intro"/>
+        </property>
+        <property generated="never" lazy="false" name="pyCity" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="PY_city"/>
+        </property>
+        <property generated="never" lazy="false" name="pyBirth" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="PY_birth"/>
+        </property>
+        <property generated="never" lazy="false" name="pyCareer" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="PY_career"/>
+        </property>
+        <property generated="never" lazy="false" name="pyTopicNum" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PY_topic_num"/>
+        </property>
+        <property generated="never" lazy="false" name="pyNoteNum" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PY_note_num"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="notes" optimistic-lock="true" sort="unsorted" table="note">
+            <key on-delete="noaction">
+                <column name="PY_id" not-null="true"/>
+            </key>
+            <one-to-many class="cn.flashpool.domain.Note" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

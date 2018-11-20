@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 
+		配置常量:
+		struts.objectFactory=spring 将action的创建交给spring容器
+		struts.objectFactory.spring.autoWire=name spring负责装配action依赖\
+		开发者模式中便于调试不用每次重启
+	 -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<package name="ShareInspiration" namespace="/" extends="struts-default">
+		<!-- 跳转注册action -->
+		<action name="UserAction_*" class="userAction" method="{1}">
+			<result name="toRegistPage">/jsp/regist.jsp</result>
+			<result name="registSuccess">/jsp/login.jsp</result>
+			<result name="toLoginPage">/jsp/login.jsp</result>
+			<result name="loginSuccess">/jsp/main.jsp</result>
+		</action>
+	</package>
+</struts>

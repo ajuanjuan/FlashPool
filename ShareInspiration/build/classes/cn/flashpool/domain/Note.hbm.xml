@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-17 14:12:14 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="shareinspiration" dynamic-insert="false" dynamic-update="false" mutable="true" name="cn.flashpool.domain.Note" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="note">
+        <composite-id class="cn.flashpool.domain.NoteId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="NId" type="int">
+                <column name="N_id"/>
+            </key-property>
+            <key-property name="pyId" type="int">
+                <column name="PY_id"/>
+            </key-property>
+            <key-property name="TId" type="int">
+                <column name="T_id"/>
+            </key-property>
+        </composite-id>
+        <many-to-one class="cn.flashpool.domain.Poolfriend" embed-xml="true" fetch="select" insert="false" name="poolfriend" not-found="exception" optimistic-lock="true" unique="false" update="false">
+            <column name="PY_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="cn.flashpool.domain.Topic" embed-xml="true" fetch="select" insert="false" name="topic" not-found="exception" optimistic-lock="true" unique="false" update="false">
+            <column name="T_id" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="NTitle" optimistic-lock="true" type="string" unique="false">
+            <column length="90" name="N_title"/>
+        </property>
+        <property generated="never" lazy="false" name="NTextLoc" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="N_text_loc"/>
+        </property>
+        <property generated="never" lazy="false" name="NImgLoc" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="N_img_loc"/>
+        </property>
+        <property generated="never" lazy="false" name="NAttachLoc" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="N_attach_loc"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-17 14:12:14 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="shareinspiration" dynamic-insert="false" dynamic-update="false" mutable="true" name="cn.flashpool.domain.Admin" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="admin">
+        <id name="AId" type="java.lang.Integer">
+            <column name="A_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="AName" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="A_name"/>
+        </property>
+        <property generated="never" lazy="false" name="APw" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="A_pw"/>
+        </property>
+        <property generated="never" lazy="false" name="ANickname" optimistic-lock="true" type="string" unique="false">
+            <column length="24" name="A_nickname"/>
+        </property>
+        <property generated="never" lazy="false" name="AType" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="A_type"/>
+        </property>
+    </class>
+</hibernate-mapping>
