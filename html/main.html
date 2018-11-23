@@ -16,39 +16,40 @@
 	</head>
 
 	<body style="background: #F6F6F6">
-		<div class="theme">
-			<nav class=" navbar navbar-expand-lg" style="background-color: #FFFFFF;">
-				<a href="#" class="title" style="font-size: 26px;">飞瀑</a>
+		<div class="theme" style="background-color: #24292E; color: white;">
+			<nav class=" navbar navbar-expand-lg" style="background-color: #24292E; color: white;">
+				<a href="#" class="title" style="font-size: 26px;color: white;">FlashPool</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="#" style="color: #FEFE06;">主页 <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">发现</a>
+							<a class="nav-link" href="#" style="color: #E36209;">发现</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">话题</a>
+							<a class="nav-link" href="#" style="color: #FC0300;">话题</a>
 						</li>
 						<li class="nav-item">
 							<form class="form-inline my-2 my-lg-0">
 								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-								<button class="btn btn-primary my-2 my-sm-0 " type="submit">Search</button>
+								<button class="btn btn-primary my-2 my-sm-0 " type="submit" style="background-color: white;color: #24292E;border: 1px solid white;">Search</button>
 							</form>
 						</li>
 					</ul>
 					<span>
-		      <a class="nav-link " href="#" style="font-size: 17px;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-		sagittis lacus vel augue laoreet rutrum faucibus." >写</a>
+		      <!--<a class="nav-link " href="#" style="font-size: 17px;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+		sagittis lacus vel augue laoreet rutrum faucibus." style="color: white;">写</a>-->
+		 <a class="nav-link " href="#" style="font-size: 17px;color: #FD8200;">写</a>
 		    </span>
 					<span>
-		      <a class="denglu" href="#" data-toggle="modal" data-target="#myModal">登录</a>
+		      <a class="denglu" href="#" data-toggle="modal" data-target="#myModal" style="color: #01FF4F;">登录</a>
 		    </span>
 					<span class="navbar-nav my-2 my-lg-0">
-		      <a class="nav-link  my-2 my-lg-0" href="会员注册.html">注册</a>
+		      <a class="nav-link  my-2 my-lg-0" href="会员注册.html" style="color: #3402F9;"> 设置</a>
 		    </span>
 				</div>
 			</nav>
@@ -89,7 +90,7 @@
 						</div>
 						<div class="modal-footer" style="text-align: center;">
 
-							<span style="margin: 0 auto;">							没有账号?<span><a class="sel" href="#" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">快速注册</a></span>
+							<span style="margin: 0 auto; color: #000000;">							没有账号?<span><a class="sel" href="#" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">快速注册</a></span>
 							</span>
 						</div>
 					</div>
@@ -136,7 +137,7 @@
 							<!--<a href="#" style="margin-right: 160px;">
 								<button type="button" class="btn btn-default" data-dismiss="modal" style="background: #007BFF;color: white;width: 150px;">登&nbsp;&nbsp;陆</button>
 							</a>-->
-							<span style="margin: 0 auto;">							已有账号?<span><a class="sel" href="#" data-toggle="modal" data-target="#myModal"  data-dismiss="modal">登录</a></span>
+							<span style="margin: 0 auto;color: #000000;">							已有账号?<span><a class="sel" href="#" data-toggle="modal" data-target="#myModal"  data-dismiss="modal">登录</a></span>
 							</span>
 
 						</div>
@@ -147,8 +148,57 @@
 			</div>
 
 		</div>
-		<div class="idea"></div>
+		<div class="idea" style="padding-top: 2rem;">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+					<div class="panel-heading" style="width:80%;border-radius:8px;margin:0 auto;padding-top:1rem;border:1px solid #D1D5DA;">
+						<h4 class="panel-title" >
+							<a style="font-size: 18px;" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> 
+								点击我进行展开，再次点击我进行折叠。第 1 部分
+							</a>
+						</h4>
+																				<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+							</div>
+						</div>
+					</div>
+				</div>
 
+			</div>
+			<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+				<div class="panel-heading" style="width:80%;border-radius:8px;margin:0 auto;padding-top:1rem;border:1px solid #D1D5DA;margin-top: 1rem;">
+					<h4 class="panel-title">
+			<h4 class="panel-title">
+				<a style="font-size: 18px; data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+					点击我进行展开，再次点击我进行折叠。第 2 部分
+				</a>
+			</h4>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+				<div class="panel-heading" style="width:80%;border-radius:8px;margin:0 auto;padding-top:1rem;border:1px solid #D1D5DA;margin-top: 1rem;">
+					<h4 class="panel-title">
+				<a  data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="font-size: 18px;;">
+					点击我进行展开，再次点击我进行折叠。第 3 部分
+				</a>
+			</h4>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
 	</body>
 
 </html>
