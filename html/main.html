@@ -13,11 +13,17 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script>
+			$(function(){
+				// 默认显示
+			$(".dropdown-toggle").dropdown('toggle');
+				}); 
+		</script>
 	</head>
 
 	<body style="background: #F6F6F6">
-		<div class="theme" style="background-color: #24292E; color: white;">
-			<nav class=" navbar navbar-expand-lg" style="background-color: #24292E; color: white;">
+		<div class="theme" style="background-color: #6434D0; color: white;border-bottom-color: red;">
+			<nav class=" navbar navbar-expand-lg" style="background-color: #6434D0; color: white;">
 				<a href="#" class="title" style="font-size: 26px;color: white;">FlashPool</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -25,31 +31,39 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#" style="color: #FEFE06;">主页 <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="#" style="color: white;">主页 <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#" style="color: #E36209;">发现</a>
+							<a class="nav-link" href="#" style="color: white;">发现</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#" style="color: #FC0300;">话题</a>
+							<a class="nav-link" href="#" style="color: white;">话题</a>
 						</li>
 						<li class="nav-item">
 							<form class="form-inline my-2 my-lg-0">
 								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-								<button class="btn btn-primary my-2 my-sm-0 " type="submit" style="background-color: white;color: #24292E;border: 1px solid white;">Search</button>
+								<button class="btn btn-primary my-2 my-sm-0 " type="submit" style="background-color: white;color: #6434D0;border: 1px solid white;">Search</button>
 							</form>
 						</li>
 					</ul>
 					<span>
-		      <!--<a class="nav-link " href="#" style="font-size: 17px;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+		      <!-- <a class="nav-link " href="#" style="font-size: 17px;" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 		sagittis lacus vel augue laoreet rutrum faucibus." style="color: white;">写</a>-->
-		 <a class="nav-link " href="#" style="font-size: 17px;color: #FD8200;">写</a>
+		 <a class="nav-link " href="#" style="font-size: 17px;color: white;" class="dropdown-toggle" data-toggle="dropdown">写<span class="caret"></span></a>
+		 <ul class="dropdown-menu" style="">
+					<li><a id="action-6" href="#">meter</a></li>
+					<li><a href="#">EJB</a></li>
+					<li><a href="#">Jasper Report</a></li>
+					
+				</ul>
+			</li>
+		</ul>
 		    </span>
 					<span>
-		      <a class="denglu" href="#" data-toggle="modal" data-target="#myModal" style="color: #01FF4F;">登录</a>
+		      <a class="denglu" href="#" data-toggle="modal" data-target="#myModal" style="color: white">登录</a>
 		    </span>
 					<span class="navbar-nav my-2 my-lg-0">
-		      <a class="nav-link  my-2 my-lg-0" href="会员注册.html" style="color: #3402F9;"> 设置</a>
+		      <a class="nav-link  my-2 my-lg-0" href="会员注册.html" style="color: white;"> 设置</a>
 		    </span>
 				</div>
 			</nav>
@@ -59,15 +73,13 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h4 class="modal-title" id="myModalLabel" style="color: #4134FF;margin: 0 auto;font-size: 50px;">飞&nbsp;&nbsp;瀑
+							<h4 class="modal-title" id="myModalLabel" style="color: #6434D0;margin: 0 auto;font-size: 50px;">飞&nbsp;&nbsp;瀑
 							</h4>
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-left: 0px;">&times;
 							</button>
 						</div>
 						<div class="modal-body">
-							<div class="come">登录飞瀑， 文若春华 思如泉涌
-
-							</div>
+							<div class="come">登录飞瀑， 文若春华 思如泉涌</div>
 							<div class="account">
 								<input style="background-color: white;border: 0px; border-bottom: 1px solid #EBEBEB;width: 22rem;height: 3rem; color: #8890A8;" type="text" name="" placeholder="请输入手机号">
 							</div>
@@ -103,7 +115,7 @@
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h4 class="modal-title" id="myModalLabel" style="color: #4134FF;margin: 0 auto;font-size: 50px;">
+							<h4 class="modal-title" id="myModalLabel" style="color: #6434D0;margin: 0 auto;font-size: 50px;">
 								飞&nbsp;&nbsp;瀑
 							</h4>
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-left: 0px;">
@@ -170,7 +182,7 @@
 				<div class="panel-heading" style="width:80%;border-radius:8px;margin:0 auto;padding-top:1rem;border:1px solid #D1D5DA;margin-top: 1rem;">
 					<h4 class="panel-title">
 			<h4 class="panel-title">
-				<a style="font-size: 18px; data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+				<a style="font-size: 18px;" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
 					点击我进行展开，再次点击我进行折叠。第 2 部分
 				</a>
 			</h4>
